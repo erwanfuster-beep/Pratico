@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://erwanfuster-beep.github.io/pratico/sitemap.xml
+Sitemap: https://erwanfuster-beep.github.io/Pratico/sitemap.xml
