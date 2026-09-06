@@ -1077,73 +1077,25 @@ footer strong{color:var(--text)}
     }
 }
 
-/* ===== Practico V2 : accueil connecté aux pages ===== */
+/* ===== Practico V3 — nouvelle page d'accueil ===== */
 body{
-    background:
-      radial-gradient(900px 520px at 8% -5%, rgba(99,91,255,.13), transparent 62%),
-      radial-gradient(760px 460px at 94% 8%, rgba(42,196,150,.10), transparent 62%),
-      radial-gradient(900px 560px at 50% 105%, rgba(99,91,255,.07), transparent 65%),
-      linear-gradient(135deg,#f8f9ff 0%,#f3f5fb 50%,#f8fbfa 100%);
-    background-attachment:fixed;
+  background:
+    radial-gradient(700px 500px at 4% 0%,rgba(100,86,245,.20),transparent 68%),
+    radial-gradient(650px 500px at 98% 15%,rgba(48,202,169,.16),transparent 66%),
+    radial-gradient(800px 500px at 45% 100%,rgba(143,128,255,.12),transparent 70%),
+    linear-gradient(145deg,#f7f8ff,#edf1f8 52%,#f5faf8);
+  background-attachment:fixed;
 }
-.nav-link{
-    text-decoration:none;
-}
-.tool-card{
-    overflow:hidden;
-}
-.tool-card-link{
-    display:block;
-    height:100%;
-    color:inherit;
-    text-decoration:none;
-}
-.home-directory{
-    width:min(100% - 40px,var(--max-width));
-    margin:0 auto 70px;
-    padding:34px;
-    border:1px solid rgba(255,255,255,.8);
-    border-radius:28px;
-    background:rgba(255,255,255,.72);
-    box-shadow:0 18px 55px rgba(24,32,55,.08);
-    backdrop-filter:blur(18px);
-}
-.directory-head{margin-bottom:24px}
-.directory-head h2{font-size:clamp(1.8rem,4vw,2.5rem);margin:8px 0}
-.directory-head p{color:var(--text-soft);max-width:680px}
-.directory-grid{
-    display:grid;
-    grid-template-columns:repeat(6,1fr);
-    gap:14px;
-}
-.directory-card{
-    min-height:135px;
-    padding:18px;
-    border:1px solid var(--border);
-    border-radius:20px;
-    background:rgba(255,255,255,.86);
-    color:var(--text);
-    text-decoration:none;
-    display:flex;
-    flex-direction:column;
-    justify-content:space-between;
-    transition:transform .22s ease,box-shadow .22s ease,border-color .22s ease;
-}
-.directory-card:hover{
-    transform:translateY(-5px);
-    box-shadow:var(--shadow-hover);
-    border-color:rgba(99,91,255,.22);
-}
-.directory-card span{font-size:30px}
-.directory-card strong{font-size:1rem}
-.directory-card small{color:var(--text-soft)}
-@media(max-width:1050px){
-    .directory-grid{grid-template-columns:repeat(3,1fr)}
-}
-@media(max-width:620px){
-    .home-directory{width:min(100% - 20px, var(--max-width));padding:22px}
-    .directory-grid{grid-template-columns:repeat(2,1fr)}
-}
+.hero-v3{width:min(1180px,calc(100% - 40px));margin:30px auto 85px;min-height:580px;padding:70px;border-radius:40px;display:grid;grid-template-columns:1.05fr .95fr;align-items:center;overflow:hidden;position:relative;background:rgba(255,255,255,.62);border:1px solid rgba(255,255,255,.9);box-shadow:0 35px 90px rgba(28,34,70,.13);backdrop-filter:blur(22px)}
+.hero-copy-v3{position:relative;z-index:2}.eyebrow-v3{font-size:.74rem;letter-spacing:.14em;font-weight:900;color:#6557f5}
+.hero-v3 h1{font-size:clamp(3.1rem,6vw,5.7rem);line-height:.94;letter-spacing:-.06em;margin:20px 0}.hero-v3 h1 span{color:transparent;background:linear-gradient(90deg,#6557f5,#32bfa1);-webkit-background-clip:text;background-clip:text}
+.hero-v3 p{max-width:620px;color:#6d7187;font-size:1.12rem;line-height:1.75}.hero-buttons-v3{display:flex;gap:12px;flex-wrap:wrap;margin:30px 0 22px}.cta-main-v3,.cta-ghost-v3{padding:15px 20px;border-radius:15px;text-decoration:none;font-weight:800;transition:.2s}.cta-main-v3{background:#17182c;color:#fff;box-shadow:0 13px 30px rgba(23,24,44,.2)}.cta-ghost-v3{background:rgba(255,255,255,.8);color:#17182c;border:1px solid rgba(20,25,50,.08)}.cta-main-v3:hover,.cta-ghost-v3:hover{transform:translateY(-3px)}
+.proof-v3{display:flex;gap:18px;flex-wrap:wrap;color:#777b90;font-size:.83rem}.hero-visual-v3{height:430px;display:grid;place-items:center;position:relative}.glow-v3{width:340px;height:340px;border-radius:50%;background:radial-gradient(circle,rgba(101,87,245,.27),transparent 68%);filter:blur(5px)}
+.dashboard-v3{position:absolute;width:285px;padding:23px;border-radius:26px;background:rgba(255,255,255,.82);border:1px solid rgba(255,255,255,.95);box-shadow:0 28px 65px rgba(30,35,70,.16);backdrop-filter:blur(18px);transform:rotate(-4deg)}.dash-top{display:flex;justify-content:space-between;margin-bottom:30px}.dash-top span{color:#3bc2a4}.dashboard-v3 small{font-size:.67rem;color:#8b8ea0;font-weight:900;letter-spacing:.1em}.dashboard-v3 strong{display:block;font-size:1.35rem;margin:8px 0 20px}.dash-row{display:flex;gap:7px}.dash-row i{height:7px;flex:1;background:#e8e9f1;border-radius:99px}.dash-row i:first-child{flex:2;background:#7569f6}.dash-result{font-size:2rem;font-weight:900;margin-top:25px}.dash-result em{font-style:normal;font-size:.72rem;color:#7c8095;font-weight:600}.float-v3{position:absolute;z-index:3;width:64px;height:64px;display:grid;place-items:center;border-radius:19px;background:rgba(255,255,255,.82);box-shadow:0 18px 40px rgba(30,35,70,.13);font-size:28px}.f1{top:40px;right:60px}.f2{bottom:65px;left:25px}.f3{bottom:25px;right:55px}
+.univers-v3,.about-v3{width:min(1180px,calc(100% - 40px));margin:0 auto 80px}.intro-v3{display:flex;justify-content:space-between;gap:40px;align-items:end;margin-bottom:25px}.intro-v3 h2,.about-v3 h2{font-size:clamp(2.2rem,4vw,3.4rem);letter-spacing:-.05em;margin:8px 0}.intro-v3 p{max-width:480px;color:#6d7187;line-height:1.7}.grid-v3{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}.u-card-v3{min-height:220px;padding:25px;border-radius:25px;background:rgba(255,255,255,.7);border:1px solid rgba(30,35,70,.08);box-shadow:0 15px 45px rgba(30,35,70,.07);text-decoration:none;color:#17182c;transition:.23s;position:relative;overflow:hidden}.u-card-v3:after{content:"";position:absolute;width:140px;height:140px;border-radius:50%;right:-70px;top:-70px;background:rgba(101,87,245,.07)}.u-card-v3:hover{transform:translateY(-7px);box-shadow:0 25px 55px rgba(30,35,70,.13);border-color:rgba(101,87,245,.2)}.ico-v3{width:58px;height:58px;display:grid;place-items:center;border-radius:18px;background:#f0efff;font-size:28px}.u-card-v3 h3{font-size:1.35rem;margin:24px 0 7px}.u-card-v3 p{color:#71758a;line-height:1.55;max-width:290px}.u-card-v3 b{position:absolute;right:23px;bottom:23px;font-size:.84rem;color:#6557f5}
+.about-v3{padding:48px;border-radius:30px;background:#191a30;color:#fff;display:grid;grid-template-columns:1fr 1fr;gap:50px;box-shadow:0 28px 65px rgba(25,26,48,.18)}.about-v3 .eyebrow-v3{color:#a59cff}.about-v3 h2{margin-top:12px}.steps-v3{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}.steps-v3 div{padding:20px;border-radius:18px;background:rgba(255,255,255,.055);border:1px solid rgba(255,255,255,.09)}.steps-v3 small{display:block;color:#999cb1;margin-bottom:35px}.steps-v3 strong{font-size:1.1rem}.steps-v3 p{color:#aeb1c2;margin:5px 0 0}
+@media(max-width:900px){.hero-v3{grid-template-columns:1fr;padding:48px 35px}.hero-visual-v3{height:330px;margin-top:20px}.grid-v3{grid-template-columns:repeat(2,1fr)}.about-v3{grid-template-columns:1fr}}
+@media(max-width:580px){.hero-v3,.univers-v3,.about-v3{width:calc(100% - 20px)}.hero-v3{padding:34px 22px;border-radius:28px}.hero-v3 h1{font-size:3.15rem}.grid-v3{grid-template-columns:1fr}.about-v3{padding:30px 22px}.steps-v3{grid-template-columns:1fr}.proof-v3{flex-direction:column;gap:7px}}
 
 </style>
 </head>
@@ -1168,219 +1120,52 @@ body{
         </a>
 
         <nav class="nav-links">
-            <a class="nav-link" href="roadtrip.html">🚗 Road Trip</a>
-            <a class="nav-link" href="cuisine.html">🍳 Cuisine</a>
-            <a class="nav-link" href="argent.html">💶 Argent</a>
-            <a class="nav-link" href="mesures.html">📏 Mesures</a>
-            <a class="nav-link" href="randonnee.html">🥾 Randonnée</a>
-            <a class="nav-link" href="etudiant.html">🎓 Étudiant</a>
+            <button class="nav-link" data-target="roadtrip">🚗 Road Trip</button>
+            <button class="nav-link" data-target="cuisine">🍳 Cuisine</button>
+            <button class="nav-link" data-target="argent">💶 Argent</button>
+            <button class="nav-link" data-target="mesures">📏 Mesures</button>
+            <button class="nav-link" data-target="randonnee">🥾 Randonnée</button>
+            <button class="nav-link" data-target="etudiant">🎓 Étudiant</button>
         </nav>
 
     </div>
 </header>
 
 <main>
-
-<section class="hero" id="accueil">
-
-    <div class="hero-content">
-
-        <div class="eyebrow">
-            ✨ Simple · Gratuit · Sans compte
-        </div>
-
-        <h1>
-            Les bons outils,
-            <span class="gradient-text">
-                sans prise de tête.
-            </span>
-        </h1>
-
-        <p class="hero-description">
-            Pratico rassemble des outils pratiques pour la vie quotidienne :
-            trajets, cuisine, argent, conversions, randonnée et études.
-            Tout directement dans ton navigateur.
-        </p>
-
-        <div class="hero-actions">
-            <button class="btn btn-primary" data-target="tools">
-                Découvrir les outils
-            </button>
-
-            <a class="btn btn-secondary" href="roadtrip.html">🚗 Calculer un trajet</a>
-        </div>
-
+<section class="hero-v3">
+  <div class="hero-copy-v3">
+    <span class="eyebrow-v3">⚡ LA BOÎTE À OUTILS DU QUOTIDIEN</span>
+    <h1>Tout ce qu’il te faut.<br><span>Au même endroit.</span></h1>
+    <p>Des outils simples pour calculer, convertir, préparer et décider plus facilement — sans compte et sans prise de tête.</p>
+    <div class="hero-buttons-v3">
+      <a href="#univers" class="cta-main-v3">Explorer Practico <b>→</b></a>
+      <a href="roadtrip.html" class="cta-ghost-v3">🚗 Calculer un trajet</a>
     </div>
-
-    <div class="hero-visual">
-
-        <div class="floating-badge badge-one">
-            ⚡ Résultats instantanés
-        </div>
-
-        <div class="dashboard-card">
-
-            <div class="dashboard-header">
-                <span class="dashboard-title">Tes outils</span>
-
-                <div class="dashboard-dots">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </div>
-            </div>
-
-            <div class="mini-tool">
-                <div class="mini-icon">🚗</div>
-                <div>
-                    <strong>Road Trip</strong>
-                    <small>Coût du trajet</small>
-                </div>
-            </div>
-
-            <div class="mini-tool">
-                <div class="mini-icon">🍳</div>
-                <div>
-                    <strong>Cuisine</strong>
-                    <small>Conversions & portions</small>
-                </div>
-            </div>
-
-            <div class="mini-tool">
-                <div class="mini-icon">💶</div>
-                <div>
-                    <strong>Argent</strong>
-                    <small>TVA · salaire · budget</small>
-                </div>
-            </div>
-
-            <div class="mini-tool">
-                <div class="mini-icon">🥾</div>
-                <div>
-                    <strong>Randonnée</strong>
-                    <small>Distance · dénivelé · difficulté</small>
-                </div>
-            </div>
-
-        </div>
-
-        <div class="floating-badge badge-two">
-            🔒 Aucun compte nécessaire
-        </div>
-
-    </div>
-
+    <div class="proof-v3"><span>✓ 100 % gratuit</span><span>✓ Sans compte</span><span>✓ Résultats instantanés</span></div>
+  </div>
+  <div class="hero-visual-v3" aria-hidden="true">
+    <div class="glow-v3"></div>
+    <div class="float-v3 f1">🧮</div><div class="float-v3 f2">🚗</div><div class="float-v3 f3">🎓</div>
+    <div class="dashboard-v3"><div class="dash-top"><b>Practico</b><span>●</span></div><small>TON OUTIL DU JOUR</small><strong>Calculateur de trajet</strong><div class="dash-row"><i></i><i></i><i></i></div><div class="dash-result">245,80 € <em>estimé</em></div></div>
+  </div>
 </section>
 
-<section class="section" id="tools">
-
-    <div class="section-heading">
-
-        <div class="eyebrow">
-            🧰 La boîte à outils
-        </div>
-
-        <h2>Tout ce dont tu as besoin.</h2>
-
-        <p>
-            Des outils simples, rapides et gratuits.
-            Cherche directement ce que tu veux calculer.
-        </p>
-
-        <div class="search-box">
-            <span>🔎</span>
-            <input
-                id="tool-search"
-                type="search"
-                placeholder="Rechercher un outil… exemple : TVA, randonnée, moyenne"
-            >
-        </div>
-
-    </div>
-
-    <div class="tool-grid" id="tool-grid">
-
-        <article class="tool-card" data-target="roadtrip" data-search="route voiture trajet essence carburant péage road trip"><a class="tool-card-link" href="roadtrip.html">
-            <div class="tool-icon">🚗</div>
-            <h3>Road Trip</h3>
-            <p>Calcule le carburant, les péages et le prix du trajet par personne.</p>
-        </a></article>
-
-        <article class="tool-card" data-target="cuisine" data-search="cuisine gramme ml litre cuillère recette portion"><a class="tool-card-link" href="cuisine.html">
-            <div class="tool-icon">🍳</div>
-            <h3>Cuisine</h3>
-            <p>Convertis les quantités, adapte une recette et retrouve les équivalences utiles.</p>
-        </a></article>
-
-        <article class="tool-card" data-target="argent" data-search="argent budget salaire tva pourcentage remboursement"><a class="tool-card-link" href="argent.html">
-            <div class="tool-icon">💶</div>
-            <h3>Argent</h3>
-            <p>TVA, pourcentages, salaire, remboursements et budget.</p>
-        </a></article>
-
-        <article class="tool-card" data-target="mesures" data-search="mesure conversion longueur poids volume température vitesse surface"><a class="tool-card-link" href="mesures.html">
-            <div class="tool-icon">📏</div>
-            <h3>Mesures & conversions</h3>
-            <p>Convertis rapidement longueurs, poids, volumes, températures, vitesses et plus.</p>
-        </a></article>
-
-        <article class="tool-card" data-target="randonnee" data-search="randonnée marche distance dénivelé difficulté montagne"><a class="tool-card-link" href="randonnee.html">
-            <div class="tool-icon">🥾</div>
-            <h3>Randonnée</h3>
-            <p>Évalue une randonnée selon sa distance et son dénivelé positif.</p>
-        </a></article>
-
-        <article class="tool-card" data-target="etudiant" data-search="étudiant moyenne note maths chimie molécule"><a class="tool-card-link" href="etudiant.html">
-            <div class="tool-icon">🎓</div>
-            <h3>Étudiant</h3>
-            <p>Moyennes, note nécessaire, conversions scientifiques et outils de chimie.</p>
-        </a></article>
-
-    </div>
-
+<section id="univers" class="univers-v3">
+  <div class="intro-v3"><div><span class="eyebrow-v3">LES UNIVERS</span><h2>Choisis ton outil.</h2></div><p>Chaque univers possède maintenant sa propre page. On pourra y ajouter autant de calculateurs que nécessaire.</p></div>
+  <div class="grid-v3">
+    <a href="roadtrip.html" class="u-card-v3"><span class="ico-v3">🚗</span><h3>Road Trip</h3><p>Trajets, carburant, frais et partage des dépenses.</p><b>Explorer →</b></a>
+    <a href="cuisine.html" class="u-card-v3"><span class="ico-v3">🍳</span><h3>Cuisine</h3><p>Conversions, portions, températures et recettes.</p><b>Explorer →</b></a>
+    <a href="argent.html" class="u-card-v3"><span class="ico-v3">💶</span><h3>Argent</h3><p>TVA, pourcentages, budget et calculs du quotidien.</p><b>Explorer →</b></a>
+    <a href="mesures.html" class="u-card-v3"><span class="ico-v3">📏</span><h3>Mesures</h3><p>Longueurs, poids, vitesses, températures et plus.</p><b>Explorer →</b></a>
+    <a href="randonnee.html" class="u-card-v3"><span class="ico-v3">🥾</span><h3>Randonnée</h3><p>Distance, durée, difficulté et préparation du parcours.</p><b>Explorer →</b></a>
+    <a href="etudiant.html" class="u-card-v3"><span class="ico-v3">🎓</span><h3>Étudiant</h3><p>Moyennes, notes et outils pratiques pour réviser.</p><b>Explorer →</b></a>
+  </div>
 </section>
 
-
-<section class="home-directory" aria-label="Accès rapide aux outils">
-    <div class="directory-head">
-        <span class="eyebrow">⚡ Accès rapide</span>
-        <h2>Un outil par besoin.</h2>
-        <p>Chaque univers possède maintenant sa propre page, avec ses calculateurs et ses outils.</p>
-    </div>
-    <div class="directory-grid">
-        <a class="directory-card" href="roadtrip.html"><span>🚗</span><strong>Road Trip</strong><small>Trajets & frais</small></a>
-        <a class="directory-card" href="cuisine.html"><span>🍳</span><strong>Cuisine</strong><small>Conversions & portions</small></a>
-        <a class="directory-card" href="argent.html"><span>💶</span><strong>Argent</strong><small>Budget & calculs</small></a>
-        <a class="directory-card" href="mesures.html"><span>📏</span><strong>Mesures</strong><small>Conversions</small></a>
-        <a class="directory-card" href="randonnee.html"><span>🥾</span><strong>Randonnée</strong><small>Distance & difficulté</small></a>
-        <a class="directory-card" href="etudiant.html"><span>🎓</span><strong>Étudiant</strong><small>Moyennes & sciences</small></a>
-    </div>
+<section class="about-v3">
+  <div><span class="eyebrow-v3">POURQUOI PRACTICO ?</span><h2>Moins chercher.<br>Plus faire.</h2></div>
+  <div class="steps-v3"><div><small>01</small><strong>Choisis</strong><p>ton univers</p></div><div><small>02</small><strong>Calcule</strong><p>en quelques secondes</p></div><div><small>03</small><strong>Continue</strong><p>avec un résultat clair</p></div></div>
 </section>
-
-<!-- ROAD TRIP -->
-
-
-
-<!-- CUISINE -->
-
-
-
-<!-- ARGENT -->
-
-
-
-<!-- MESURES -->
-
-
-
-<!-- RANDONNEE -->
-
-
-
-<!-- ETUDIANT -->
-
-
-
 </main>
 
 <footer>
@@ -2197,6 +1982,7 @@ $("subject-list").addEventListener("click",e=>{
     if(rows.length<=1) return;
 
     e.target.closest(".subject-row").remove();
+    calculateAverage();
 });
 
 function calculateAverage(){
@@ -2442,10 +2228,41 @@ $("calculate-chem").addEventListener("click",()=>{
     `;
 });
 
+/* =========================================================
+   ENTREE CLAVIER
+========================================================= */
+
+document.addEventListener("keydown",e=>{
+
+    if(e.key!=="Enter") return;
+
+    const active=document.activeElement;
+
+    if(!active || active.tagName!=="INPUT") return;
+
+    const section=active.closest(".tool-section");
+
+    if(!section) return;
+
+    const buttons={
+        roadtrip:"calculate-roadtrip",
+        cuisine:"calculate-kitchen",
+        argent:"calculate-budget",
+        mesures:"calculate-conversion",
+        randonnee:"calculate-hike"
+    };
+
+    if(buttons[section.id]){
+        $(buttons[section.id]).click();
+    }
+});
 
 /* =========================================================
    INITIALISATION
 ========================================================= */
+
+calculateAverage();
+
 </script>
 
 </body>
