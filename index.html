@@ -1,5 +1,4 @@
 
-
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -1079,176 +1078,72 @@ footer strong{color:var(--text)}
     }
 }
 
-
-/* =========================
-   PRATICO — DESIGN REFONTE 2026
-   Overrides visuels : la logique HTML/JS existante est conservée.
-   ========================= */
-:root{
-  --bg:#f5f7ff;
-  --surface:#ffffff;
-  --surface-soft:#f8f9ff;
-  --text:#111827;
-  --text-soft:#667085;
-  --primary:#635bff;
-  --primary-dark:#4b43d0;
-  --primary-light:#efedff;
-  --border:#e7e9f2;
-  --shadow:0 18px 55px rgba(25,28,70,.09);
-  --shadow-hover:0 28px 70px rgba(38,32,110,.16);
-  --radius:24px;
-}
-
+/* ===== Practico V2 : accueil connecté aux pages ===== */
 body{
-  background:
-    radial-gradient(circle at 8% 5%,rgba(99,91,255,.10),transparent 28%),
-    radial-gradient(circle at 92% 16%,rgba(38,198,218,.08),transparent 25%),
-    linear-gradient(180deg,#f9faff 0%,#f4f6fc 100%);
+    background:
+      radial-gradient(900px 520px at 8% -5%, rgba(99,91,255,.13), transparent 62%),
+      radial-gradient(760px 460px at 94% 8%, rgba(42,196,150,.10), transparent 62%),
+      radial-gradient(900px 560px at 50% 105%, rgba(99,91,255,.07), transparent 65%),
+      linear-gradient(135deg,#f8f9ff 0%,#f3f5fb 50%,#f8fbfa 100%);
+    background-attachment:fixed;
 }
-
-body::before{width:520px;height:520px;top:-270px;right:-180px;background:rgba(99,91,255,.12);filter:blur(10px)}
-body::after{width:420px;height:420px;bottom:-210px;left:-170px;background:rgba(45,196,160,.08);filter:blur(10px)}
-
-.navbar{
-  background:rgba(255,255,255,.78);
-  border-bottom:1px solid rgba(231,233,242,.8);
-  box-shadow:0 8px 35px rgba(23,29,65,.06);
-  backdrop-filter:blur(18px);
-  -webkit-backdrop-filter:blur(18px);
+.nav-link{
+    text-decoration:none;
 }
-.nav-inner{min-height:76px}
-.logo{font-size:1.18rem;font-weight:850;letter-spacing:-.03em}
-.logo-mark{
-  width:38px;height:38px;border-radius:13px;
-  display:grid;place-items:center;
-  color:#fff;
-  background:linear-gradient(135deg,#766dff,#4e46d8);
-  box-shadow:0 10px 25px rgba(99,91,255,.28);
-}
-.nav-link{border-radius:12px;font-weight:700;color:#596176;transition:.22s ease}
-.nav-link:hover,.nav-link:focus-visible{background:#f0efff;color:var(--primary);transform:translateY(-1px)}
-
-.hero{position:relative;padding-top:88px;padding-bottom:82px}
-.hero::before{
-  content:"";position:absolute;inset:0 0 auto 0;height:430px;z-index:-1;pointer-events:none;
-  background:radial-gradient(circle at 50% 0%,rgba(99,91,255,.12),transparent 62%);
-}
-.hero-content{max-width:690px}
-.eyebrow{
-  display:inline-flex;align-items:center;gap:7px;
-  padding:8px 13px;border:1px solid #e1dfff;border-radius:999px;
-  background:rgba(255,255,255,.72);color:#5b53d9;font-size:.82rem;font-weight:800;
-  box-shadow:0 8px 25px rgba(70,63,170,.06)
-}
-.hero h1{font-size:clamp(3.2rem,7vw,5.8rem);line-height:.98;letter-spacing:-.065em;margin-top:20px;max-width:760px}
-.gradient-text{background:linear-gradient(100deg,#635bff 15%,#8b5cf6 55%,#16b7a1 100%);-webkit-background-clip:text;background-clip:text;color:transparent}
-.hero-description{font-size:1.12rem;line-height:1.75;max-width:650px;color:#667085;margin-top:24px}
-.hero-actions{gap:12px;margin-top:32px}
-.btn{border-radius:15px;padding:13px 19px;font-weight:800;transition:.22s ease}
-.btn-primary{background:linear-gradient(135deg,#6d65ff,#564de0);box-shadow:0 14px 30px rgba(99,91,255,.25)}
-.btn-primary:hover{transform:translateY(-2px);box-shadow:0 18px 36px rgba(99,91,255,.32)}
-.btn-secondary{background:#fff;border:1px solid #e4e6ef;box-shadow:0 8px 24px rgba(20,25,60,.06)}
-.btn-secondary:hover{transform:translateY(-2px);border-color:#cbc8ff;background:#fafaff}
-
-.hero-visual{filter:drop-shadow(0 25px 50px rgba(40,35,110,.12))}
-.dashboard-card{
-  border:1px solid rgba(255,255,255,.8)!important;
-  background:linear-gradient(145deg,rgba(255,255,255,.96),rgba(246,246,255,.92))!important;
-  box-shadow:0 28px 70px rgba(37,32,100,.14)!important;
-  border-radius:30px!important;
-  padding:24px!important;
-}
-.dashboard-header{margin-bottom:18px}
-.dashboard-title{font-size:1rem!important;font-weight:850!important}
-.dashboard-dots span{background:#d8d9e5!important}
-.mini-tool{border:1px solid #ececf5!important;background:#fff!important;border-radius:18px!important;padding:14px!important;transition:.22s ease}
-.mini-tool:hover{transform:translateX(4px);box-shadow:0 10px 25px rgba(30,35,80,.07)}
-.mini-icon{border-radius:13px!important}
-.floating-badge{border:1px solid #e7e5ff!important;background:rgba(255,255,255,.9)!important;box-shadow:0 12px 30px rgba(40,35,100,.10)!important;font-weight:800!important}
-
-.section{padding:92px 0}
-.section-heading h2{font-size:clamp(2rem,4vw,3rem);letter-spacing:-.045em}
-.section-heading>p{font-size:1.02rem;color:#727b90}
-.search-box{
-  max-width:650px;margin:28px auto 0;
-  border:1px solid #e2e5ef!important;background:rgba(255,255,255,.92)!important;
-  box-shadow:0 15px 40px rgba(35,40,85,.08)!important;border-radius:18px!important;
-}
-.search-box:focus-within{border-color:#aaa5ff!important;box-shadow:0 16px 42px rgba(99,91,255,.12)!important}
-.search-box input{background:transparent!important}
-
-.tool-grid{gap:18px!important}
 .tool-card{
-  position:relative;overflow:hidden;
-  border:1px solid #e7e9f1!important;
-  background:rgba(255,255,255,.92)!important;
-  border-radius:23px!important;
-  padding:25px!important;
-  box-shadow:0 12px 35px rgba(30,35,80,.055)!important;
-  transition:transform .25s ease,box-shadow .25s ease,border-color .25s ease!important;
+    overflow:hidden;
 }
-.tool-card::after{content:"→";position:absolute;right:22px;top:22px;color:#a0a5b7;font-size:1.1rem;font-weight:900;transition:.22s ease}
-.tool-card:hover{transform:translateY(-7px)!important;box-shadow:var(--shadow-hover)!important;border-color:#d8d5ff!important}
-.tool-card:hover::after{color:var(--primary);transform:translateX(4px)}
-.tool-icon{width:52px!important;height:52px!important;border-radius:16px!important;display:grid;place-items:center!important;font-size:1.5rem!important;background:linear-gradient(135deg,#f1efff,#faf9ff)!important;border:1px solid #e4e1ff!important;box-shadow:none!important}
-.tool-card h3{font-size:1.12rem!important;margin-top:18px!important;letter-spacing:-.02em}
-.tool-card p{color:#70788c!important;line-height:1.65!important}
-
-.tool-section{
-  position:relative;
-  width:min(100% - 32px,var(--max-width));
-  margin:30px auto!important;
-  border:1px solid #e4e6ef!important;
-  border-radius:30px!important;
-  background:rgba(255,255,255,.94)!important;
-  box-shadow:var(--shadow)!important;
-  padding:34px!important;
+.tool-card-link{
+    display:block;
+    height:100%;
+    color:inherit;
+    text-decoration:none;
 }
-.tool-section-header{padding-bottom:24px!important;border-bottom:1px solid #eef0f5!important;margin-bottom:24px!important}
-.tool-section-icon{border-radius:16px!important;box-shadow:none!important}
-.tool-section h2{font-size:1.7rem;letter-spacing:-.035em}
-.tool-section-header p{color:#747c90!important}
-.form-card,.result-card,.student-card{
-  border:1px solid #e6e8f0!important;
-  border-radius:22px!important;
-  background:#fff!important;
-  box-shadow:0 10px 28px rgba(25,30,70,.05)!important;
+.home-directory{
+    width:min(100% - 40px,var(--max-width));
+    margin:0 auto 70px;
+    padding:34px;
+    border:1px solid rgba(255,255,255,.8);
+    border-radius:28px;
+    background:rgba(255,255,255,.72);
+    box-shadow:0 18px 55px rgba(24,32,55,.08);
+    backdrop-filter:blur(18px);
 }
-.field input,.field select,.subject-row input,.subject-row select{
-  border:1px solid #dfe2ec!important;background:#fafbfe!important;border-radius:13px!important;
-  transition:.2s ease!important;
+.directory-head{margin-bottom:24px}
+.directory-head h2{font-size:clamp(1.8rem,4vw,2.5rem);margin:8px 0}
+.directory-head p{color:var(--text-soft);max-width:680px}
+.directory-grid{
+    display:grid;
+    grid-template-columns:repeat(6,1fr);
+    gap:14px;
 }
-.field input:focus,.field select:focus,.subject-row input:focus,.subject-row select:focus{border-color:#aaa5ff!important;box-shadow:0 0 0 4px rgba(99,91,255,.10)!important;background:#fff!important;outline:none}
-.calculate-btn,.primary-btn{border-radius:14px!important;background:linear-gradient(135deg,#6d65ff,#564de0)!important;box-shadow:0 12px 25px rgba(99,91,255,.20)!important;font-weight:800!important}
-.result-card{background:linear-gradient(145deg,#faf9ff,#fff)!important}
-.result-main{letter-spacing:-.045em!important}
-
-.subtool-tabs,.money-tabs{background:#f3f4f9!important;border:1px solid #e6e8ef!important;border-radius:15px!important;padding:5px!important;gap:5px!important}
-.subtool-tab,.money-tab{border-radius:11px!important;font-weight:750!important}
-.subtool-tab.active,.money-tab.active{background:#fff!important;color:var(--primary)!important;box-shadow:0 5px 16px rgba(30,35,75,.08)!important}
-
-footer{margin-top:70px!important;padding:32px 0!important;border-top:1px solid #e3e5ed!important;color:#7b8395!important}
-footer a{color:#5e57d8!important;font-weight:700}
-
-@media(max-width:800px){
-  .nav-inner{padding:0 16px;min-height:68px}
-  .nav-links{gap:4px;overflow-x:auto;scrollbar-width:none}
-  .nav-links::-webkit-scrollbar{display:none}
-  .nav-link{white-space:nowrap;padding:8px 10px;font-size:.82rem}
-  .hero{padding-top:58px;padding-bottom:55px}
-  .hero h1{font-size:clamp(2.8rem,13vw,4.3rem)}
-  .hero-description{font-size:1rem}
-  .hero-visual{margin-top:36px}
-  .tool-section{width:min(100% - 20px,var(--max-width));padding:22px 16px!important;border-radius:23px!important}
+.directory-card{
+    min-height:135px;
+    padding:18px;
+    border:1px solid var(--border);
+    border-radius:20px;
+    background:rgba(255,255,255,.86);
+    color:var(--text);
+    text-decoration:none;
+    display:flex;
+    flex-direction:column;
+    justify-content:space-between;
+    transition:transform .22s ease,box-shadow .22s ease,border-color .22s ease;
 }
-
-@media(max-width:520px){
-  .hero-actions{flex-direction:column;align-items:stretch}
-  .btn{text-align:center}
-  .dashboard-card{padding:18px!important;border-radius:24px!important}
-  .section{padding:65px 0}
-  .tool-grid{grid-template-columns:1fr!important}
-  .tool-card{padding:21px!important}
+.directory-card:hover{
+    transform:translateY(-5px);
+    box-shadow:var(--shadow-hover);
+    border-color:rgba(99,91,255,.22);
+}
+.directory-card span{font-size:30px}
+.directory-card strong{font-size:1rem}
+.directory-card small{color:var(--text-soft)}
+@media(max-width:1050px){
+    .directory-grid{grid-template-columns:repeat(3,1fr)}
+}
+@media(max-width:620px){
+    .home-directory{width:min(100% - 20px, var(--max-width));padding:22px}
+    .directory-grid{grid-template-columns:repeat(2,1fr)}
 }
 
 </style>
@@ -1274,12 +1169,12 @@ footer a{color:#5e57d8!important;font-weight:700}
         </a>
 
         <nav class="nav-links">
-            <button class="nav-link" data-target="roadtrip">🚗 Road Trip</button>
-            <button class="nav-link" data-target="cuisine">🍳 Cuisine</button>
-            <button class="nav-link" data-target="argent">💶 Argent</button>
-            <button class="nav-link" data-target="mesures">📏 Mesures</button>
-            <button class="nav-link" data-target="randonnee">🥾 Randonnée</button>
-            <button class="nav-link" data-target="etudiant">🎓 Étudiant</button>
+            <a class="nav-link" href="roadtrip.html">🚗 Road Trip</a>
+            <a class="nav-link" href="cuisine.html">🍳 Cuisine</a>
+            <a class="nav-link" href="argent.html">💶 Argent</a>
+            <a class="nav-link" href="mesures.html">📏 Mesures</a>
+            <a class="nav-link" href="randonnee.html">🥾 Randonnée</a>
+            <a class="nav-link" href="etudiant.html">🎓 Étudiant</a>
         </nav>
 
     </div>
@@ -1313,9 +1208,7 @@ footer a{color:#5e57d8!important;font-weight:700}
                 Découvrir les outils
             </button>
 
-            <button class="btn btn-secondary" data-target="roadtrip">
-                🚗 Calculer un trajet
-            </button>
+            <a class="btn btn-secondary" href="roadtrip.html">🚗 Calculer un trajet</a>
         </div>
 
     </div>
@@ -1408,44 +1301,61 @@ footer a{color:#5e57d8!important;font-weight:700}
 
     <div class="tool-grid" id="tool-grid">
 
-        <article class="tool-card" data-target="roadtrip" data-search="route voiture trajet essence carburant péage road trip">
+        <article class="tool-card" data-target="roadtrip" data-search="route voiture trajet essence carburant péage road trip"><a class="tool-card-link" href="roadtrip.html">
             <div class="tool-icon">🚗</div>
             <h3>Road Trip</h3>
             <p>Calcule le carburant, les péages et le prix du trajet par personne.</p>
-        </article>
+        </a></article>
 
-        <article class="tool-card" data-target="cuisine" data-search="cuisine gramme ml litre cuillère recette portion">
+        <article class="tool-card" data-target="cuisine" data-search="cuisine gramme ml litre cuillère recette portion"><a class="tool-card-link" href="cuisine.html">
             <div class="tool-icon">🍳</div>
             <h3>Cuisine</h3>
             <p>Convertis les quantités, adapte une recette et retrouve les équivalences utiles.</p>
-        </article>
+        </a></article>
 
-        <article class="tool-card" data-target="argent" data-search="argent budget salaire tva pourcentage remboursement">
+        <article class="tool-card" data-target="argent" data-search="argent budget salaire tva pourcentage remboursement"><a class="tool-card-link" href="argent.html">
             <div class="tool-icon">💶</div>
             <h3>Argent</h3>
             <p>TVA, pourcentages, salaire, remboursements et budget.</p>
-        </article>
+        </a></article>
 
-        <article class="tool-card" data-target="mesures" data-search="mesure conversion longueur poids volume température vitesse surface">
+        <article class="tool-card" data-target="mesures" data-search="mesure conversion longueur poids volume température vitesse surface"><a class="tool-card-link" href="mesures.html">
             <div class="tool-icon">📏</div>
             <h3>Mesures & conversions</h3>
             <p>Convertis rapidement longueurs, poids, volumes, températures, vitesses et plus.</p>
-        </article>
+        </a></article>
 
-        <article class="tool-card" data-target="randonnee" data-search="randonnée marche distance dénivelé difficulté montagne">
+        <article class="tool-card" data-target="randonnee" data-search="randonnée marche distance dénivelé difficulté montagne"><a class="tool-card-link" href="randonnee.html">
             <div class="tool-icon">🥾</div>
             <h3>Randonnée</h3>
             <p>Évalue une randonnée selon sa distance et son dénivelé positif.</p>
-        </article>
+        </a></article>
 
-        <article class="tool-card" data-target="etudiant" data-search="étudiant moyenne note maths chimie molécule">
+        <article class="tool-card" data-target="etudiant" data-search="étudiant moyenne note maths chimie molécule"><a class="tool-card-link" href="etudiant.html">
             <div class="tool-icon">🎓</div>
             <h3>Étudiant</h3>
             <p>Moyennes, note nécessaire, conversions scientifiques et outils de chimie.</p>
-        </article>
+        </a></article>
 
     </div>
 
+</section>
+
+
+<section class="home-directory" aria-label="Accès rapide aux outils">
+    <div class="directory-head">
+        <span class="eyebrow">⚡ Accès rapide</span>
+        <h2>Un outil par besoin.</h2>
+        <p>Chaque univers possède maintenant sa propre page, avec ses calculateurs et ses outils.</p>
+    </div>
+    <div class="directory-grid">
+        <a class="directory-card" href="roadtrip.html"><span>🚗</span><strong>Road Trip</strong><small>Trajets & frais</small></a>
+        <a class="directory-card" href="cuisine.html"><span>🍳</span><strong>Cuisine</strong><small>Conversions & portions</small></a>
+        <a class="directory-card" href="argent.html"><span>💶</span><strong>Argent</strong><small>Budget & calculs</small></a>
+        <a class="directory-card" href="mesures.html"><span>📏</span><strong>Mesures</strong><small>Conversions</small></a>
+        <a class="directory-card" href="randonnee.html"><span>🥾</span><strong>Randonnée</strong><small>Distance & difficulté</small></a>
+        <a class="directory-card" href="etudiant.html"><span>🎓</span><strong>Étudiant</strong><small>Moyennes & sciences</small></a>
+    </div>
 </section>
 
 <!-- ROAD TRIP -->
